@@ -21,6 +21,18 @@ public class CubeScript : MonoBehaviour
             rbCube.AddForce(Vector3.up * 500);
         }
         // Gives cube velocity
-        rbCube.velocity = Vector3.forward * 20f;
+        // rbCube.velocity = Vector3.forward * 20f;
+    }
+    // Detects collision and destroys gameObject w/ Enemy tag upon collision
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            // Destroys colliding object tagged Enemy
+            Destroy(collision.gameObject);
+
+            // Destroys the gameObject attached to script
+            // Destroy(gameObject);
+        }
     }
 }
