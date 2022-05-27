@@ -14,7 +14,11 @@ public class CubeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Destroys gameObject when pressing spacebar
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Destroy(gameObject);
+        }
     }
     // Function for destroying gameObject needed here instead of Start()
     private void OnMouseDown()
