@@ -20,5 +20,7 @@ public class CubeScript : MonoBehaviour
         {
             rbCube.AddForce(Vector3.up * 500);
         }
+        // Gives cube velocity
+        rbCube.velocity = Vector3.forward * 20f;
     }
 }
