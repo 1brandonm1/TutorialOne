@@ -7,12 +7,18 @@ public class CubeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Destroy(gameObject, 3f);
+        // gameObject will be destroyed 3 secs after start
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    // Function for destroying gameObject needed here instead of Start()
+    private void OnMouseDown()
+    {
+        Destroy(gameObject);
     }
 }
